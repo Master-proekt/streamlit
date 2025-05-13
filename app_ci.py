@@ -814,7 +814,11 @@ if run_button:
                         st.download_button("Скачать результат в Excel", data=file_buffer,
                                            file_name="causalimpact_result.xlsx",
                                            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-
                     except Exception as e:
-                        st.error(f"Ошибка: {e}")
+                        print(f"Ошибка в блоке кода: {e}")
+
+        except Exception as e:
+            st.error(f"Ошибка: {e}")
+
+
 
